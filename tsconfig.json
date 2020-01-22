@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "module": "commonjs",
+    "declaration": true,
+    "declarationMap": false,
+    "sourceMap": true,
+    "outDir": "lib",
+    "rootDir": "src",
+
+    "moduleResolution": "node",
+
+    "strict": true,
+    "alwaysStrict": true,
+
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "forceConsistentCasingInFileNames": true,
+    "noStrictGenericChecks": true,
+
+    "declarationDir": "dec"
+  },
+  "exclude": [
+    "node_modules",
+    "lib"
+  ]
+}
