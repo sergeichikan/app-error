@@ -1,8 +1,16 @@
 import { stackInArray } from "./stack-in-array";
 
-export const serializedError = ({ name, message, stack, toJson }: Error & {toJson?: unknown}) => ({
-    name,
-    message,
-    toJson: typeof toJson === "function" ? toJson() : toJson,
-    stack: stackInArray(stack),
-});
+type ExtendedError = Error & {
+    toJSON?: unknown;
+};
+
+export const serializedError = (err: ExtendedError) => {
+    const json: unknown = typeof err.toJSON === "function" ? err.toJSON() : undefined;
+    const stack = stackInArray(err.stack);
+    return {
+        name: err.name,
+        message: err.message,
+        json,
+        stack,
+    };
+};

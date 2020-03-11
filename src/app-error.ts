@@ -1,6 +1,6 @@
 import { stackInArray } from "./stack-in-array";
 
-export type Mixin = Record<PropertyKey, unknown>;
+type Mixin = Record<PropertyKey, unknown>;
 
 export class AppError extends Error {
 

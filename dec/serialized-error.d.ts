@@ -1,8 +1,10 @@
-export declare const serializedError: ({ name, message, stack, toJson }: Error & {
-    toJson?: unknown;
-}) => {
+declare type ExtendedError = Error & {
+    toJSON?: unknown;
+};
+export declare const serializedError: (err: ExtendedError) => {
     name: string;
     message: string;
-    toJson: any;
+    json: unknown;
     stack: string[];
 };
+export {};

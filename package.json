@@ -1,6 +1,6 @@
 {
   "name": "@sergeichikan/app-error",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "lib/index.js",
   "types": "dec/index.d.ts",

@@ -1,4 +1,4 @@
-export declare type Mixin = Record<PropertyKey, unknown>;
+declare type Mixin = Record<PropertyKey, unknown>;
 export declare class AppError extends Error {
     private readonly public;
     private readonly private;
@@ -6,3 +6,4 @@ export declare class AppError extends Error {
     toPublic(): Mixin;
     toJSON(): Mixin;
 }
+export {};
